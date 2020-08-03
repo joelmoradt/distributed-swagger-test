@@ -1,0 +1,59 @@
+{
+  "components": {},
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Foo API",
+    "version": "1.0.0",
+    "description": "Foo API with linked models"
+  },
+  "paths": {
+    "/policies": {
+      "get": {
+        "summary": "Return all policies",
+        "responses": {
+          "200": {
+            "description": "Array of policies",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Policy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/policies/{id}": {
+      "get": {
+        "summary": "Return one policy given an id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Policy object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Policy"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

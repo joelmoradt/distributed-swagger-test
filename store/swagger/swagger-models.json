@@ -1,0 +1,42 @@
+{
+  "components": {
+    "schemas": {
+      "Policy": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "planCode": {
+            "type": "string"
+          },
+          "productOptions": {
+            "$ref": "#/components/schemas/PolicyOptions"
+          }
+        }
+      },
+      "PolicyOptions": {
+        "type": "object",
+        "properties": {
+          "premium": {
+            "type": "integer"
+          },
+          "payoutAmount": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Models",
+    "version": "1.0.0",
+    "description": "All models in Kotlin"
+  },
+  "paths": {},
+  "tags": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "scripts": {
+    "swagger-generate": "swagger-jsdoc -d swagger/definition.js -o swagger/swagger-models.json models/*.js",
+    "start": "node index.js"
+  }
+}
